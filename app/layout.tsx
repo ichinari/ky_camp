@@ -8,7 +8,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body suppressHydrationWarning>{children}</body>
+      <body
+        suppressHydrationWarning
+        className="min-h-screen text-white bg-[#111111]"
+      >
+        {children}
+      </body>
     </html>
   );
 }
