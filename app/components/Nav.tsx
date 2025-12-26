@@ -47,9 +47,12 @@ function Nav() {
             <Button onClick={selectedShopDashBoard}>ダッシュボード</Button>
             <Button onClick={selectedRequestList}>要望一覧</Button>
             <Button onClick={selectedCamperDistribution}>利用者分布</Button>
-            <Button>
-              <LogoutLink>ログアウト</LogoutLink>
-            </Button>
+            <LogoutLink
+              className="w-full p-3 bg-[#4FA3A5] text-[#EDEDED] text-center rounded-lg
+            cursor-pointer hover:bg-[#5FB385]"
+            >
+              ログアウト
+            </LogoutLink>
           </div>
         ) : (
           /* キャンパー */
