@@ -1,4 +1,4 @@
-import { LoginLink } from "@kinde-oss/kinde-auth-nextjs";
+import { LoginLink } from "@kinde-oss/kinde-auth-nextjs/components";
 import Link from "next/link";
 
 function MemberTop() {
