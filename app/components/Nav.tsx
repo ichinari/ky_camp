@@ -5,7 +5,6 @@ import Button from "./Button";
 
 function Nav() {
   const { isAuthenticated } = useKindeBrowserClient();
-  const isAuth = isAuthenticated;
 
   const selectedCamper = () => {
     console.log("selectedCamper");
@@ -24,7 +23,7 @@ function Nav() {
             <Button onClick={selectedShop}>店舗</Button>
           </div>
 
-          {isAuth ? (
+          {isAuthenticated ? (
             /* 店舗 */
             <div className="flex md:flex-col p-4 md:gap-y-4">
               <button>ダッシュボード</button>
