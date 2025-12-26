@@ -1,7 +1,7 @@
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 import { redirect } from "next/navigation";
 
-async function ShopTop() {
+async function ShopDashBoard() {
   const { isAuthenticated } = getKindeServerSession();
   const isAuth = await isAuthenticated();
   if (!isAuth) {
@@ -11,4 +11,4 @@ async function ShopTop() {
   return <div>shop top page</div>;
 }
 
-export default ShopTop;
+export default ShopDashBoard;
