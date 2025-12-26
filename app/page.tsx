@@ -1,4 +1,3 @@
-"use client";
 import { LoginLink } from "@kinde-oss/kinde-auth-nextjs";
 import Link from "next/link";
 
@@ -18,7 +17,7 @@ function MemberTop() {
         <div className="text-center">
           <div className="mb-3">店舗の方はこちら</div>
           <LoginLink className="block w-full p-3 bg-[#4FA3A5] text-[#EDEDED] rounded-lg cursor-pointer hover:bg-[#5FB385]">
-            ログイン
+            ログイン / 新規登録
           </LoginLink>
         </div>
       </div>
