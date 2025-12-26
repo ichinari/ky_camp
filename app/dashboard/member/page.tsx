@@ -1,5 +1,5 @@
 function page() {
-  return <div>member top page</div>;
+  return <div className="w-full h-full">member top page</div>;
 }
 
 export default page;
