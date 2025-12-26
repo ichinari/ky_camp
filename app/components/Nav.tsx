@@ -6,11 +6,30 @@ import Button from "./Button";
 function Nav() {
   const { isAuthenticated } = useKindeBrowserClient();
 
+  /* ユーザ切り替え*/
   const selectedCamper = () => {
     console.log("selectedCamper");
   };
   const selectedShop = () => {
     console.log("selectedShop");
+  };
+
+  /* ユーザコンテンツ切り替え */
+  const selectedShopDashBoard = () => {
+    console.log("selectedShopDashBoard");
+  };
+  const selectedRequestList = () => {
+    console.log("selectedRequestList");
+  };
+  const selectedCampoerDistribution = () => {
+    console.log("selectedCampoerDistribution");
+  };
+
+  const selectedCamperDashBoard = () => {
+    console.log("selectedDashBoard");
+  };
+  const selectedCamperRequest = () => {
+    console.log("selectedCamperRequest");
   };
 
   return (
@@ -26,18 +45,18 @@ function Nav() {
           {isAuthenticated ? (
             /* 店舗 */
             <div className="flex md:flex-col p-4 md:gap-y-4">
-              <button>ダッシュボード</button>
-              <button>要望一覧</button>
-              <button>利用者分布</button>
-              <button>
+              <Button onClick={selectedShopDashBoard}>ダッシュボード</Button>
+              <Button onClick={selectedRequestList}>要望一覧</Button>
+              <Button onClick={selectedCampoerDistribution}>利用者分布</Button>
+              <Button>
                 <LogoutLink>ログアウト</LogoutLink>
-              </button>
+              </Button>
             </div>
           ) : (
             /* キャンパー */
             <div className="flex md:flex-col p-4 md:gap-y-4">
-              <button>ダッシュボード</button>
-              <button>要望送信</button>
+              <Button onClick={selectedCamperDashBoard}>ダッシュボード</Button>
+              <Button onClick={selectedCamperRequest}>要望送信</Button>
             </div>
           )}
         </div>
