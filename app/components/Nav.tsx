@@ -33,7 +33,7 @@ function Nav() {
   };
 
   return (
-    <div className="w-full h-auto md:w-1/2 md:h-screen bg-[#1A1A1A] border-r border-[#2A2A2A]">
+    <nav className="w-full h-auto md:w-1/2 md:h-screen bg-[#1A1A1A] border-r border-[#2A2A2A]">
       <div>
         {/* ユーザ切り替え */}
         <div className="border border-b border-[#2A2A2A] p-4 gap-4 flex">
@@ -43,26 +43,39 @@ function Nav() {
 
         {isAuthenticated ? (
           /* 店舗 */
-          <div className="flex md:flex-col p-4 md:gap-y-4">
-            <Button onClick={selectedShopDashBoard}>ダッシュボード</Button>
-            <Button onClick={selectedRequestList}>要望一覧</Button>
-            <Button onClick={selectedCamperDistribution}>利用者分布</Button>
-            <LogoutLink
-              className="w-full p-3 bg-[#4FA3A5] text-[#EDEDED] text-center rounded-lg
+          <ul className="flex md:flex-col p-4 md:gap-y-4">
+            <li>
+              <Button onClick={selectedShopDashBoard}>ダッシュボード</Button>
+            </li>
+
+            <li>
+              <Button onClick={selectedRequestList}>要望一覧</Button>
+            </li>
+            <li>
+              <Button onClick={selectedCamperDistribution}>利用者分布</Button>
+            </li>
+            <li>
+              <LogoutLink
+                className="w-full p-3 bg-[#4FA3A5] text-[#EDEDED] text-center rounded-lg
             cursor-pointer hover:bg-[#5FB385]"
-            >
-              ログアウト
-            </LogoutLink>
-          </div>
+              >
+                ログアウト
+              </LogoutLink>
+            </li>
+          </ul>
         ) : (
           /* キャンパー */
-          <div className="flex md:flex-col p-4 md:gap-y-4">
-            <Button onClick={selectedCamperDashBoard}>ダッシュボード</Button>
-            <Button onClick={selectedCamperRequest}>要望送信</Button>
-          </div>
+          <ul className="flex md:flex-col p-4 md:gap-y-4">
+            <li>
+              <Button onClick={selectedCamperDashBoard}>ダッシュボード</Button>
+            </li>
+            <li>
+              <Button onClick={selectedCamperRequest}>要望送信</Button>
+            </li>
+          </ul>
         )}
       </div>
-    </div>
+    </nav>
   );
 }
 
