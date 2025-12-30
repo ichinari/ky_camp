@@ -6,22 +6,28 @@ import { FaChalkboardUser } from "react-icons/fa6";
 import { IoIosSend } from "react-icons/io";
 import { CiViewList } from "react-icons/ci";
 import { GoGraph } from "react-icons/go";
+import { FaRegMoon } from "react-icons/fa6";
 
 type Props = {
-  iconName: String;
+  iconName: string;
+  color?: string;
+  size?: number;
 };
 
-function Icons({ iconName }: Props) {
+function Icons({ iconName, color, size = 20 }: Props) {
+  const iconProps = { color, size };
+
   return (
     <>
-      {iconName === "login" && <CiLogin />}{" "}
-      {iconName === "logout" && <CiLogout />}{" "}
-      {iconName === "camper" && <FaPersonBooth />}{" "}
-      {iconName === "shop" && <CiShop />}
-      {iconName === "dashboard" && <FaChalkboardUser />}
-      {iconName === "send" && <IoIosSend />}
-      {iconName === "list" && <CiViewList />}
-      {iconName === "graph" && <GoGraph />}
+      {iconName === "login" && <CiLogin {...iconProps} />}
+      {iconName === "logout" && <CiLogout {...iconProps} />}
+      {iconName === "camper" && <FaPersonBooth {...iconProps} />}
+      {iconName === "shop" && <CiShop {...iconProps} />}
+      {iconName === "dashboard" && <FaChalkboardUser {...iconProps} />}
+      {iconName === "send" && <IoIosSend {...iconProps} />}
+      {iconName === "list" && <CiViewList {...iconProps} />}
+      {iconName === "graph" && <GoGraph {...iconProps} />}
+      {iconName === "moon" && <FaRegMoon {...iconProps} />}
     </>
   );
 }
