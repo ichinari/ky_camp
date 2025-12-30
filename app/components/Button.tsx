@@ -6,6 +6,7 @@ type Props = {
   isDisabled?: boolean;
   onClick?: () => void;
   children: ReactNode;
+  optionClassName?: string;
 };
 
 function Button({
@@ -14,6 +15,7 @@ function Button({
   isDisabled = false,
   onClick,
   children,
+  optionClassName = "",
 }: Props) {
   return (
     <button
@@ -22,9 +24,9 @@ function Button({
         isDisabled
           ? "bg-[#2A2A2A] text-[#6A6A6A] cursor-not-allowed opacity-50"
           : isActive
-          ? "bg-[#4FA3A5] text-[#EDEDED] cursor-pointer"
-          : "bg-transparent text-[#9A9A9A] border border-[#2A2A2A] cursor-pointer hover:bg-[#4FA3A5] hover:text-[#EDEDED] hover:border-[#4FA3A5]"
-      }`}
+            ? "bg-[#4FA3A5] text-[#EDEDED] cursor-pointer"
+            : "bg-transparent text-[#9A9A9A] border border-[#2A2A2A] cursor-pointer hover:bg-[#4FA3A5] hover:text-[#EDEDED] hover:border-[#4FA3A5]"
+      } ${optionClassName}`}
       disabled={isDisabled}
       onClick={onClick}
     >
