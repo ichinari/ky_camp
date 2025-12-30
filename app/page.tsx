@@ -1,5 +1,6 @@
 import { LoginLink } from "@kinde-oss/kinde-auth-nextjs/components";
 import Link from "next/link";
+import Icons from "@/components/Icons";
 
 function MemberTop() {
   return (
@@ -9,14 +10,16 @@ function MemberTop() {
           <div className="mb-3">キャンパーの方はこちら</div>
           <Link
             href="/dashboard/member"
-            className="block w-full p-3 bg-[#4FA3A5] text-[#EDEDED] rounded-lg cursor-pointer hover:bg-[#5FB385]"
+            className="flex items-center justify-center gap-2 w-full p-3 bg-[#4FA3A5] text-[#EDEDED] rounded-lg cursor-pointer hover:bg-[#5FB385]"
           >
+            <Icons iconName="dashboard" />
             ダッシュボード
           </Link>
         </div>
         <div className="text-center">
           <div className="mb-3">店舗の方はこちら</div>
-          <LoginLink className="block w-full p-3 bg-[#4FA3A5] text-[#EDEDED] rounded-lg cursor-pointer hover:bg-[#5FB385]">
+          <LoginLink className="flex items-center justify-center gap-2 w-full p-3 bg-[#4FA3A5] text-[#EDEDED] rounded-lg cursor-pointer hover:bg-[#5FB385]">
+            <Icons iconName="login" />
             ログイン / 新規登録
           </LoginLink>
         </div>
